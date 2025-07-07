@@ -1,0 +1,87 @@
+{
+  "mcpServers": {
+    "multi-personality-ai": {
+      "command": "python3",
+      "args": ["mcp_personality_server.py"],
+      "description": "Multi-Personality AI Server with collaborative personalities",
+      "capabilities": {
+        "tools": [
+          "start_collaborative_session",
+          "consult_personality",
+          "get_team_consensus",
+          "personality_feedback",
+          "assign_task",
+          "get_personality_status"
+        ],
+        "resources": [
+          "personality://manager",
+          "personality://analyst", 
+          "personality://creative",
+          "personality://critic",
+          "personality://implementer",
+          "session://current",
+          "session://history"
+        ]
+      },
+      "personalities": {
+        "director": {
+          "name": "Director",
+          "role": "Project Manager & Coordinator",
+          "description": "Oversees all operations, coordinates between personalities, makes final decisions"
+        },
+        "logic": {
+          "name": "Logic",
+          "role": "Data Analyst & Strategic Thinker", 
+          "description": "Focuses on logical analysis, data interpretation, risk assessment"
+        },
+        "spark": {
+          "name": "Spark",
+          "role": "Creative Innovator & Solution Designer",
+          "description": "Generates innovative ideas, creative solutions, user experience focus"
+        },
+        "guardian": {
+          "name": "Guardian",
+          "role": "Quality Assurance & Process Optimizer",
+          "description": "Identifies flaws, provides constructive criticism, ensures quality standards"
+        },
+        "builder": {
+          "name": "Builder",
+          "role": "Implementation Specialist & Problem Solver",
+          "description": "Focuses on practical implementation, technical execution"
+        }
+      },
+      "usage_examples": {
+        "consultation": {
+          "tool": "consult_personality",
+          "example": {
+            "personality": "creative",
+            "question": "How can we improve user engagement?",
+            "context": "Mobile app design"
+          }
+        },
+        "consensus": {
+          "tool": "get_team_consensus",
+          "example": {
+            "topic": "Technology stack",
+            "details": "React vs Vue.js for frontend"
+          }
+        },
+        "task_assignment": {
+          "tool": "assign_task",
+          "example": {
+            "personality": "implementer",
+            "task": "Create API endpoints",
+            "priority": "high"
+          }
+        },
+        "collaborative_session": {
+          "tool": "start_collaborative_session",
+          "example": {
+            "topic": "Product Launch",
+            "initial_request": "Plan new product launch strategy"
+          }
+        }
+      }
+    }
+  }
+}
